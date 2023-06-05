@@ -71,7 +71,7 @@ export const Experience = ({ env = './scene/field.hdr' }) => {
         minPolarAngle={0}
         minDistance={1}
         maxDistance={20}
-        maxPolarAngle={Math.PI / 1.5} />
+        maxPolarAngle={Math.PI / 2} />
       {/* </PresentationControls> */}
     </>
 
