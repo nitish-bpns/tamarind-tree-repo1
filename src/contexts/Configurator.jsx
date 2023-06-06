@@ -10,9 +10,9 @@ export const ConfiguratorProvider = ({ children }) => {
     const [gazeboCeilingDrapeOne, setGazeboCeilingDrapeOne] = useState(false);
     const [gazeboCeilingDrapeTwo, setGazeboCeilingDrapeTwo] = useState(false);
     const [gazeboCeilingDrapeThree, setGazeboCeilingDrapeThree] = useState(false);
-    const [gcdOneTexture, setGcdOneTexture] = useState('');
-    const [gcdTwoTexture, setGcdTwoTexture] = useState('');
-    const [gcdThreeTexture, setGcdThreeTexture] = useState('');
+    const [gcdOneTexture, setGcdOneTexture] = useState(0);
+    const [gcdTwoTexture, setGcdTwoTexture] = useState(0);
+    const [gcdThreeTexture, setGcdThreeTexture] = useState(0);
     const [gazeboCeilingFlowerOne,
         setGazeboCeilingFlowerOne] = useState(false);
     const [gazeboCeilingFlowerTwo,
@@ -23,6 +23,30 @@ export const ConfiguratorProvider = ({ children }) => {
     const [gcfTwoTexture, setGcfTwoTexture] = useState('');
     const [gcfThreeTexture, setGcfThreeTexture] = useState('');
 
+    //gazebo pillars
+    const [gazeboPillarDrapeOne, setGazeboPillarDrapeOne] = useState(false);
+    const [gazeboPillarDrapeTwo, setGazeboPillarDrapeTwo] = useState(false);
+    const [gazeboPillarDrapeThree, setGazeboPillarDrapeThree] = useState(false);
+    const [gpdOneTexture, setGpdOneTexture] = useState(0);
+    const [gpdTwoTexture, setGpdTwoTexture] = useState(0);
+    const [gpdThreeTexture, setGpdThreeTexture] = useState(0);
+
+    // Lawn
+    const [lawnCeilingDrapeOne, setLawnCeilingDrapeOne] = useState(false);
+    const [lawnCeilingDrapeTwo, setLawnCeilingDrapeTwo] = useState(false);
+    const [lawnCeilingDrapeThree, setLawnCeilingDrapeThree] = useState(false);
+    const [lawnCeilingDrapeFour, setLawnCeilingDrapeFour] = useState(false);
+    const [lcdOneTexture, setLcdOneTexture] = useState(0);
+    const [lcdTwoTexture, setLcdTwoTexture] = useState(0);
+    const [lcdThreeTexture, setLcdThreeTexture] = useState(0);
+    const [lcdFourTexture, setLcdFourTexture] = useState(0);
+
+    const [lawnCeilingFlowerOne,
+        setLawnCeilingFlowerOne] = useState(false);
+    const [lawnCeilingFlowerTwo,
+        setLawnCeilingFlowerTwo] = useState(false);
+    const [lawnCeilingFlowerThree,
+        setLawnCeilingFlowerThree,] = useState(false);
 
 
 
@@ -60,6 +84,47 @@ export const ConfiguratorProvider = ({ children }) => {
         setGcfTwoTexture,
         gcfThreeTexture,
         setGcfThreeTexture,
+
+        // gazebo pillars
+        gazeboPillarDrapeOne,
+        setGazeboPillarDrapeOne,
+        gazeboPillarDrapeTwo,
+        setGazeboPillarDrapeTwo,
+        gazeboPillarDrapeThree,
+        setGazeboPillarDrapeThree,
+        gpdOneTexture,
+        setGpdOneTexture,
+        gpdTwoTexture,
+        setGpdTwoTexture,
+        gpdThreeTexture,
+        setGpdThreeTexture,
+
+        //Lawn
+        lawnCeilingDrapeOne,
+        setLawnCeilingDrapeOne,
+        lawnCeilingDrapeTwo,
+        setLawnCeilingDrapeTwo,
+        lawnCeilingDrapeThree,
+        setLawnCeilingDrapeThree,
+        lawnCeilingDrapeFour,
+        setLawnCeilingDrapeFour,
+        lcdOneTexture,
+        setLcdOneTexture,
+        lcdTwoTexture,
+        setLcdTwoTexture,
+        lcdThreeTexture,
+        setLcdThreeTexture,
+        lcdFourTexture,
+        setLcdFourTexture,
+
+        lawnCeilingFlowerOne,
+        setLawnCeilingFlowerOne,
+        lawnCeilingFlowerTwo,
+        setLawnCeilingFlowerTwo,
+        lawnCeilingFlowerThree,
+        setLawnCeilingFlowerThree,
+
+
     }}>
         {children}
     </ConfiguratorContext.Provider>

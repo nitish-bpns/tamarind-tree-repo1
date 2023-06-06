@@ -1,8 +1,57 @@
 .toggleGazebo {
     color: black !important;
+    /* width: 100%; */
+    /* background-color: antiquewhite; */
 }
 
 /* .css-d9c359-MuiButtonBase-root-MuiToggleButton-root.Mui-selected {
     color: #07203a;
     background-color: rgba(141, 195, 250, 0.08);
 } */
+.gcdTexture {
+    display: inline-flex;
+    flex-direction: row !important;
+}
+
+.gcdDiv {
+    position: absolute;
+    left: 30%;
+    margin: 4% 0 0 0;
+}
+
+.gcd2Div {
+    position: absolute;
+    left: 30%;
+    margin: 13% 0 0 0;
+}
+
+.gcd3Div {
+    position: absolute;
+    left: 30%;
+    margin: 21% 0 0 0;
+}
+
+.gcd4Div {
+    position: absolute;
+    left: 30%;
+    margin: 29% 0 0 0;
+}
+
+.grey {
+    height: 25px;
+    width: 25px;
+    margin: 5px 20px 0 0;
+}
+
+.gazeboPanel {
+    width: 30rem;
+}
+
+
+@media screen and (max-width: 464px) {
+    .gazeboPanel {
+        width: 100%;
+    }
+
+
+}

@@ -16,6 +16,7 @@ import {
 } from "@mui/material";
 import './style.css';
 import { useConfigurator } from "../contexts/Configurator";
+import { LawnInterface } from './LawnInterface';
 export const Interface = () => {
 
   // const { tableWidth, setTableWidth, legs, setLegs, legsColor, setLegsColor } =
@@ -57,6 +58,53 @@ export const Interface = () => {
     setGazeboCeilingProps,
 
 
+    // gazebo pillars
+    gazeboPillarDrapeOne,
+    setGazeboPillarDrapeOne,
+    gazeboPillarDrapeTwo,
+    setGazeboPillarDrapeTwo,
+    gazeboPillarDrapeThree,
+    setGazeboPillarDrapeThree,
+    gpdOneTexture,
+    setGpdOneTexture,
+    gpdTwoTexture,
+    setGpdTwoTexture,
+    gpdThreeTexture,
+    setGpdThreeTexture,
+
+
+
+    //Lawn
+    lawnCeilingDrapeOne,
+    setLawnCeilingDrapeOne,
+    lawnCeilingDrapeTwo,
+    setLawnCeilingDrapeTwo,
+    lawnCeilingDrapeThree,
+    setLawnCeilingDrapeThree,
+    lawnCeilingDrapeFour,
+    setLawnCeilingDrapeFour,
+    lcdOneTexture,
+    setLcdOneTexture,
+    lcdTwoTexture,
+    setLcdTwoTexture,
+    lcdThreeTexture,
+    setLcdThreeTexture,
+    lcdFourTexture,
+    setLcdFourTexture,
+
+    lawnCeilingFlowerOne,
+    setLawnCeilingFlowerOne,
+    lawnCeilingFlowerTwo,
+    setLawnCeilingFlowerTwo,
+    lawnCeilingFlowerThree,
+    setLawnCeilingFlowerThree,
+
+    lawnCeilingProps,
+    setLawnCeilingProps,
+
+
+
+
   } = useConfigurator();
 
   const [part, setPart] = useState('gazebo');
@@ -93,12 +141,48 @@ export const Interface = () => {
   };
 
 
+  // Lawn
+
+  const [lawnPart, setLawnPart] = useState('lawnCeiling');
+  const handleChangeTen = (event, newLawnPart) => {
+    setLawnPart(newLawnPart);
+  };
+
+  // Lawn Drapes one two three
+  const handleChangeEleven = event => {
+    setLawnCeilingDrapeOne(current => !current);
+  };
+  const handleChangeTwelve = event => {
+    setLawnCeilingDrapeTwo(current => !current);
+  };
+  const handleChangeThirteen = event => {
+    setLawnCeilingDrapeThree(current => !current);
+  };
+  const handleChangeForteen = event => {
+    setLawnCeilingDrapeFour(current => !current);
+  };
+
+
+  // gazebo pillars
+  const handleChangeFifteen = event => {
+    setGazeboPillarDrapeOne(current => !current);
+  };
+  const handleChangeSixteen = event => {
+    setGazeboPillarDrapeTwo(current => !current);
+  };
+  const handleChangeSeventeen = event => {
+    setGazeboPillarDrapeThree(current => !current);
+  };
+
   // const [gazeboCeilingDrapes, setGazeboCeilingDrapes] = useState('gazeboCeilingDrapeOne');
   // const handleChangeThree = (event, newGazeboCeilingDrapes) => {
   // setGazeboCeilingDrapes(newGazeboCeilingDrapes);
   // };
 
-  console.log({ gazeboCeilingDrapeOne, gcdOneTexture, gcdTwoTexture, gcdThreeTexture, gcfOneTexture, gcfTwoTexture, gcfThreeTexture, gazeboCeilingProps });
+  console.log({
+    lawnCeilingDrapeOne, lcdOneTexture, lcdTwoTexture
+    , lcdThreeTexture
+  });
 
   return (
     <Box
@@ -111,264 +195,524 @@ export const Interface = () => {
       color={'black'}
     >
       <Stack spacing={3}>
-        <Typography variant="caption">Bandstand Configurator</Typography>
 
-        <ToggleButtonGroup
-          color="primary"
-          value={part}
-          exclusive
-          onChange={handleChange}
-          aria-label="Platform"
-        >
-          <ToggleButton className='toggleGazebo' value="gazebo">Gazebo</ToggleButton>
-          <ToggleButton className='toggleGazebo' value="lawn">Lawn Area</ToggleButton>
-        </ToggleButtonGroup>
+        <Box className="glass" p={2}>
 
-        {part === 'gazebo' && (
-          <>
+          <div className='gazeboPanel'>
+
+            <Typography variant="caption">Bandstand Configurator</Typography>
+
+            <br />
 
             <ToggleButtonGroup
-              className='toggleGazebo'
               color="primary"
-              value={gazeboPart}
+              value={part}
               exclusive
-              onChange={handleChangeTwo}
-              aria-label="gazeboPart"
+              onChange={handleChange}
+              aria-label="Platform"
             >
-              <ToggleButton className='toggleGazebo' value="gazeboCeiling">Ceiling</ToggleButton>
-              <ToggleButton className='toggleGazebo' value="gazeboPillars">Pillars</ToggleButton>
-              <ToggleButton className='toggleGazebo' value="gazeboFloor">Floor</ToggleButton>
-              <ToggleButton className='toggleGazebo' value="gazeboSeats">Seats</ToggleButton>
-              <ToggleButton className='toggleGazebo' value="gazeboSteps">Steps</ToggleButton>
-              <ToggleButton className='toggleGazebo' value="gazeboBackdrop">Backdrop</ToggleButton>
-
+              <ToggleButton className='toggleGazebo' value="gazebo">Gazebo</ToggleButton>
+              <ToggleButton className='toggleGazebo' value="lawn">Lawn Area</ToggleButton>
             </ToggleButtonGroup>
 
+            <br /><br />
 
-            {gazeboPart === 'gazeboCeiling' && (
+            {part === 'gazebo' && (
               <>
 
-                <Box className="glass" p={2}>
-                  <FormGroup>
-                    <FormLabel>Drapes</FormLabel>
-                    <FormControlLabel
-                      required control={<Checkbox />}
-                      onChange={handleChangeFour}
-                      label="Drape 1"
-                    />
+                <ToggleButtonGroup
+                  className='toggleGazebo'
+                  color="primary"
+                  value={gazeboPart}
+                  exclusive
+                  onChange={handleChangeTwo}
+                  aria-label="gazeboPart"
+                >
+                  <ToggleButton className='toggleGazebo' value="gazeboCeiling">Ceiling</ToggleButton>
+                  <ToggleButton className='toggleGazebo' value="gazeboPillars">Pillars</ToggleButton>
+                  <ToggleButton className='toggleGazebo' value="gazeboFloor">Floor</ToggleButton>
+                  <ToggleButton className='toggleGazebo' value="gazeboSeats">Seats</ToggleButton>
+                  <ToggleButton className='toggleGazebo' value="gazeboSteps">Steps</ToggleButton>
+                  <ToggleButton className='toggleGazebo' value="gazeboBackdrop">Backdrop</ToggleButton>
 
-                    {gazeboCeilingDrapeOne && (
-                      <>
-                        <Box className="glass" p={2}>
-                          <FormControl>
-                            <FormLabel>Textures</FormLabel>
-                            <RadioGroup
-                              value={gcdOneTexture}
-                              onChange={(e) => setGcdOneTexture(e.target.value)}
-                            >
-                              <FormControlLabel
-                                value="gcdOneTextureOne"
-                                control={<Radio />}
-                                label="Texture 1"
-                              />
-                              <FormControlLabel value="gcdOneTextureTwo" control={<Radio />} label="Texture 2" />
-                              <FormControlLabel value="gcdOneTextureThree" control={<Radio />} label="Texture 3" />
-                            </RadioGroup>
-                          </FormControl>
-                        </Box>
+                </ToggleButtonGroup>
+                <br /><br />
 
-                      </>
-                    )}
+                {gazeboPart === 'gazeboCeiling' && (
+                  <>
 
-                    <FormControlLabel
-                      required control={<Checkbox />}
-                      onChange={handleChangeFive}
-                      label="Drape 2"
-                    />
-
-                    {gazeboCeilingDrapeTwo && (
-                      <>
-                        <Box className="glass" p={2}>
-                          <FormControl>
-                            <FormLabel>Texture 2</FormLabel>
-                            <RadioGroup
-                              value={gcdTwoTexture}
-                              onChange={(e) => setGcdTwoTexture(e.target.value)}
-                            >
-                              <FormControlLabel
-                                value="gcdTwoTextureOne"
-                                control={<Radio />}
-                                label="Texture 1"
-                              />
-                              <FormControlLabel value="gcdTwoTextureTwo" control={<Radio />} label="Texture 2" />
-                              <FormControlLabel value="gcdTwoTextureThree" control={<Radio />} label="Texture 3" />
-                            </RadioGroup>
-                          </FormControl>
-                        </Box>
-
-                      </>
-                    )}
-
-                    <FormControlLabel
-                      required control={<Checkbox />}
-                      onChange={handleChangeSix}
-                      label="Drape 3"
-                    />
-                    {gazeboCeilingDrapeThree && (
-                      <>
-                        <Box className="glass" p={2}>
-                          <FormControl>
-                            <FormLabel>Texture 3</FormLabel>
-                            <RadioGroup
-                              value={gcdThreeTexture}
-                              onChange={(e) => setGcdThreeTexture(e.target.value)}
-                            >
-                              <FormControlLabel
-                                value="gcdTwoTextureOne"
-                                control={<Radio />}
-                                label="Texture 1"
-                              />
-                              <FormControlLabel value="gcdThreeTextureTwo" control={<Radio />} label="Texture 2" />
-                              <FormControlLabel value="gcdThreeTextureThree" control={<Radio />} label="Texture 3" />
-                            </RadioGroup>
-                          </FormControl>
-                        </Box>
-
-                      </>
-                    )}
-                  </FormGroup>
-                </Box>
-
-
-
-
-                {/* Flower Interface */}
-
-
-                <Box className="glass" p={2}>
-                  <FormGroup>
-                    <FormLabel>Flowers</FormLabel>
-                    <FormControlLabel
-                      required control={<Checkbox />}
-                      onChange={handleChangeSeven}
-                      label="Flower 1"
-                    />
-
-                    {gazeboCeilingFlowerOne && (
-                      <>
-                        <Box className="glass" p={2}>
-                          <FormControl>
-                            <FormLabel>Textures</FormLabel>
-                            <RadioGroup
-                              value={gcfOneTexture}
-                              onChange={(e) => setGcfOneTexture(e.target.value)}
-                            >
-                              <FormControlLabel
-                                value="gcfOneTextureOne"
-                                control={<Radio />}
-                                label="Texture 1"
-                              />
-                              <FormControlLabel value="gcfOneTextureTwo" control={<Radio />} label="Texture 2" />
-                              <FormControlLabel value="gcfOneTextureThree" control={<Radio />} label="Texture 3" />
-                            </RadioGroup>
-                          </FormControl>
-                        </Box>
-
-                      </>
-                    )}
-
-                    <FormControlLabel
-                      required control={<Checkbox />}
-                      onChange={handleChangeEight}
-                      label="Flower 2"
-                    />
-
-                    {gazeboCeilingFlowerTwo && (
-                      <>
-                        <Box className="glass" p={2}>
-                          <FormControl>
-                            <FormLabel>Textures</FormLabel>
-                            <RadioGroup
-                              value={gcfTwoTexture}
-                              onChange={(e) => setGcfTwoTexture(e.target.value)}
-                            >
-                              <FormControlLabel
-                                value="gcfTwoTextureOne"
-                                control={<Radio />}
-                                label="Texture 1"
-                              />
-                              <FormControlLabel value="gcfTwoTextureTwo" control={<Radio />} label="Texture 2" />
-                              <FormControlLabel value="gcfTwoTextureThree" control={<Radio />} label="Texture 3" />
-                            </RadioGroup>
-                          </FormControl>
-                        </Box>
-
-                      </>
-                    )}
-
-                    <FormControlLabel
-                      required control={<Checkbox />}
-                      onChange={handleChangeNine}
-                      label="Flower 3"
-                    />
-                    {gazeboCeilingFlowerThree && (
-                      <>
-                        <Box className="glass" p={2}>
-                          <FormControl>
-                            <FormLabel>Textures</FormLabel>
-                            <RadioGroup
-                              value={gcfThreeTexture}
-                              onChange={(e) => setGcfThreeTexture(e.target.value)}
-                            >
-                              <FormControlLabel
-                                value="gcfThreeTextureOne"
-                                control={<Radio />}
-                                label="Texture 1"
-                              />
-                              <FormControlLabel value="gcfThreeTextureTwo" control={<Radio />} label="Texture 2" />
-                              <FormControlLabel value="gcfThreeTextureThree" control={<Radio />} label="Texture 3" />
-                            </RadioGroup>
-                          </FormControl>
-                        </Box>
-
-                      </>
-                    )}
-                  </FormGroup>
-                </Box>
-
-
-
-                {/* Props Interface */}
-
-
-                <Box className="glass" p={2}>
-                  <FormControl>
-                    <FormLabel>Props</FormLabel>
-                    <RadioGroup
-                      value={gazeboCeilingProps}
-                      onChange={(e) => setGazeboCeilingProps(e.target.value)}
-                    >
+                    <FormGroup>
+                      <FormLabel>Drapes</FormLabel>
                       <FormControlLabel
-                        value="gcpOne"
-                        control={<Radio />}
-                        label="Props 1"
+                        required control={<Checkbox />}
+                        onChange={handleChangeFour}
+                        label="Drape 1"
                       />
-                      <FormControlLabel value="gcpTwo" control={<Radio />} label="Props 2" />
-                      <FormControlLabel value="gcpThree" control={<Radio />} label="Props 3" />
-                      <FormControlLabel value="gcpFour" control={<Radio />} label="Props 4" />
 
-                    </RadioGroup>
-                  </FormControl>
-                </Box>
+                      {gazeboCeilingDrapeOne && (
+                        <>
+                          {/* <Box className="glass" p={0}> */}
+                          <div className='gcdDiv'>
+                            <FormControl>
+                              {/* <FormLabel>Textures</FormLabel> */}
+                              <RadioGroup
+                                value={gcdOneTexture}
+                                onChange={(e) => setGcdOneTexture(parseInt(e.target.value))}
+                                className='gcdTexture'
+                              >
+                                <FormControlLabel
+                                  value={0}
+                                  control={<Radio />}
+                                  label={<img className='grey' src='./gcdTextures/texOne/grey.jpg' />}
+                                />
+
+                                <FormControlLabel value={1} control={<Radio />} label={<img className='grey' src='./gcdTextures/texTwo/red.jpg' />} />
+
+                                <FormControlLabel value={2} control={<Radio />} label={<img className='grey' src='./gcdTextures/texThree/yellow.jpg' />} />
+                              </RadioGroup>
+                            </FormControl>
+                          </div>
+                          {/* </Box> */}
+
+                        </>
+                      )}
+
+                      <FormControlLabel
+                        required control={<Checkbox />}
+                        onChange={handleChangeFive}
+                        label="Drape 2"
+                      />
+
+                      {gazeboCeilingDrapeTwo && (
+                        <>
+                          {/* <Box className="glass" p={0}> */}
+                          <div className='gcd2Div'>
+                            <FormControl>
+                              {/* <FormLabel>Textures</FormLabel> */}
+                              <RadioGroup
+                                value={gcdTwoTexture}
+                                onChange={(e) => setGcdTwoTexture(parseInt(e.target.value))}
+                                className='gcdTexture'
+                              >
+                                <FormControlLabel
+                                  value={0}
+                                  control={<Radio />}
+                                  label={<img className='grey' src='./gcdTextures/texOne/grey.jpg' />}
+                                />
+
+                                <FormControlLabel value={1} control={<Radio />} label={<img className='grey' src='./gcdTextures/texTwo/red.jpg' />} />
+
+                                <FormControlLabel value={2} control={<Radio />} label={<img className='grey' src='./gcdTextures/texThree/yellow.jpg' />} />
+                              </RadioGroup>
+                            </FormControl>
+                          </div>
+                          {/* </Box> */}
+                        </>
+                      )}
+
+                      <FormControlLabel
+                        required control={<Checkbox />}
+                        onChange={handleChangeSix}
+                        label="Drape 3"
+                      />
+                      {gazeboCeilingDrapeThree && (
+                        <>
+                          {/* <Box className="glass" p={0}> */}
+                          <div className='gcd3Div'>
+                            <FormControl>
+                              {/* <FormLabel>Textures</FormLabel> */}
+                              <RadioGroup
+                                value={gcdThreeTexture}
+                                onChange={(e) => setGcdThreeTexture(parseInt(e.target.value))}
+                                className='gcdTexture'
+                              >
+                                <FormControlLabel
+                                  value={0}
+                                  control={<Radio />}
+                                  label={<img className='grey' src='./gcdTextures/texOne/grey.jpg' />}
+                                />
+
+                                <FormControlLabel value={1} control={<Radio />} label={<img className='grey' src='./gcdTextures/texTwo/red.jpg' />} />
+
+                                <FormControlLabel value={2} control={<Radio />} label={<img className='grey' src='./gcdTextures/texThree/yellow.jpg' />} />
+                              </RadioGroup>
+                            </FormControl>
+                          </div>
+                          {/* </Box> */}
+
+                        </>
+                      )}
+                    </FormGroup>
+
+
+
+                    {/* Flower Interface */}
+
+
+                    {/* <Box className="glass" p={2}> */}
+                    <FormGroup>
+                      <FormLabel>Flowers</FormLabel>
+                      <FormControlLabel
+                        required control={<Checkbox />}
+                        onChange={handleChangeSeven}
+                        label="Flower 1"
+                      />
+
+                      {gazeboCeilingFlowerOne && (
+                        <>
+                          <Box className="glass" p={2}>
+                            <FormControl>
+                              <FormLabel>Textures</FormLabel>
+                              <RadioGroup
+                                value={gcfOneTexture}
+                                onChange={(e) => setGcfOneTexture(e.target.value)}
+                              >
+                                <FormControlLabel
+                                  value="gcfOneTextureOne"
+                                  control={<Radio />}
+                                  label="Texture 1"
+                                />
+                                <FormControlLabel value="gcfOneTextureTwo" control={<Radio />} label="Texture 2" />
+                                <FormControlLabel value="gcfOneTextureThree" control={<Radio />} label="Texture 3" />
+                              </RadioGroup>
+                            </FormControl>
+                          </Box>
+
+                        </>
+                      )}
+
+                      <FormControlLabel
+                        required control={<Checkbox />}
+                        onChange={handleChangeEight}
+                        label="Flower 2"
+                      />
+
+                      {gazeboCeilingFlowerTwo && (
+                        <>
+                          <Box className="glass" p={2}>
+                            <FormControl>
+                              <FormLabel>Textures</FormLabel>
+                              <RadioGroup
+                                value={gcfTwoTexture}
+                                onChange={(e) => setGcfTwoTexture(e.target.value)}
+                              >
+                                <FormControlLabel
+                                  value="gcfTwoTextureOne"
+                                  control={<Radio />}
+                                  label="Texture 1"
+                                />
+                                <FormControlLabel value="gcfTwoTextureTwo" control={<Radio />} label="Texture 2" />
+                                <FormControlLabel value="gcfTwoTextureThree" control={<Radio />} label="Texture 3" />
+                              </RadioGroup>
+                            </FormControl>
+                          </Box>
+
+                        </>
+                      )}
+
+                      <FormControlLabel
+                        required control={<Checkbox />}
+                        onChange={handleChangeNine}
+                        label="Flower 3"
+                      />
+                      {gazeboCeilingFlowerThree && (
+                        <>
+                          <Box className="glass" p={2}>
+                            <FormControl>
+                              <FormLabel>Textures</FormLabel>
+                              <RadioGroup
+                                value={gcfThreeTexture}
+                                onChange={(e) => setGcfThreeTexture(e.target.value)}
+                              >
+                                <FormControlLabel
+                                  value="gcfThreeTextureOne"
+                                  control={<Radio />}
+                                  label="Texture 1"
+                                />
+                                <FormControlLabel value="gcfThreeTextureTwo" control={<Radio />} label="Texture 2" />
+                                <FormControlLabel value="gcfThreeTextureThree" control={<Radio />} label="Texture 3" />
+                              </RadioGroup>
+                            </FormControl>
+                          </Box>
+
+                        </>
+                      )}
+                    </FormGroup>
+                    {/* </Box> */}
+
+
+                    {/* Props Interface */}
+
+
+                    {/* <Box className="glass" p={2}> */}
+                    <FormControl>
+                      <FormLabel>Props</FormLabel>
+                      <RadioGroup
+                        value={gazeboCeilingProps}
+                        onChange={(e) => setGazeboCeilingProps(e.target.value)}
+                      >
+                        <FormControlLabel
+                          value="gcpOne"
+                          control={<Radio />}
+                          label="Props 1"
+                        />
+                        <FormControlLabel value="gcpTwo" control={<Radio />} label="Props 2" />
+                        <FormControlLabel value="gcpThree" control={<Radio />} label="Props 3" />
+                        <FormControlLabel value="gcpFour" control={<Radio />} label="Props 4" />
+
+                      </RadioGroup>
+                    </FormControl>
+                    {/* </Box> */}
 
 
 
 
-              </>
-            )}
+                  </>
+                )}
 
 
-            {/*  slider control
+
+
+
+
+                {gazeboPart === 'gazeboPillars' && (
+                  <>
+
+                    <FormGroup>
+                      <FormLabel>Drapes</FormLabel>
+                      <FormControlLabel
+                        required control={<Checkbox />}
+                        onChange={handleChangeFifteen}
+                        label="Drape 1"
+                      />
+
+                      {gazeboPillarDrapeOne && (
+                        <>
+                          {/* <Box className="glass" p={0}> */}
+                          <div className='gcdDiv'>
+                            <FormControl>
+                              {/* <FormLabel>Textures</FormLabel> */}
+                              <RadioGroup
+                                value={gpdOneTexture}
+                                onChange={(e) => setGcdOneTexture(parseInt(e.target.value))}
+                                className='gcdTexture'
+                              >
+                                <FormControlLabel
+                                  value={0}
+                                  control={<Radio />}
+                                  label={<img className='grey' src='./gcdTextures/texOne/grey.jpg' />}
+                                />
+
+                                <FormControlLabel value={1} control={<Radio />} label={<img className='grey' src='./gcdTextures/texTwo/red.jpg' />} />
+
+                                <FormControlLabel value={2} control={<Radio />} label={<img className='grey' src='./gcdTextures/texThree/yellow.jpg' />} />
+                              </RadioGroup>
+                            </FormControl>
+                          </div>
+                          {/* </Box> */}
+
+                        </>
+                      )}
+
+                      <FormControlLabel
+                        required control={<Checkbox />}
+                        onChange={handleChangeSixteen}
+                        label="Drape 2"
+                      />
+
+                      {gazeboPillarDrapeTwo && (
+                        <>
+                          {/* <Box className="glass" p={0}> */}
+                          <div className='gcd2Div'>
+                            <FormControl>
+                              {/* <FormLabel>Textures</FormLabel> */}
+                              <RadioGroup
+                                value={gpdTwoTexture}
+                                onChange={(e) => setGcdTwoTexture(parseInt(e.target.value))}
+                                className='gcdTexture'
+                              >
+                                <FormControlLabel
+                                  value={0}
+                                  control={<Radio />}
+                                  label={<img className='grey' src='./gcdTextures/texOne/grey.jpg' />}
+                                />
+
+                                <FormControlLabel value={1} control={<Radio />} label={<img className='grey' src='./gcdTextures/texTwo/red.jpg' />} />
+
+                                <FormControlLabel value={2} control={<Radio />} label={<img className='grey' src='./gcdTextures/texThree/yellow.jpg' />} />
+                              </RadioGroup>
+                            </FormControl>
+                          </div>
+                          {/* </Box> */}
+                        </>
+                      )}
+
+                      <FormControlLabel
+                        required control={<Checkbox />}
+                        onChange={handleChangeSeventeen}
+                        label="Drape 3"
+                      />
+                      {gazeboPillarDrapeThree && (
+                        <>
+                          {/* <Box className="glass" p={0}> */}
+                          <div className='gcd3Div'>
+                            <FormControl>
+                              {/* <FormLabel>Textures</FormLabel> */}
+                              <RadioGroup
+                                value={gpdThreeTexture}
+                                onChange={(e) => setGcdThreeTexture(parseInt(e.target.value))}
+                                className='gcdTexture'
+                              >
+                                <FormControlLabel
+                                  value={0}
+                                  control={<Radio />}
+                                  label={<img className='grey' src='./gcdTextures/texOne/grey.jpg' />}
+                                />
+
+                                <FormControlLabel value={1} control={<Radio />} label={<img className='grey' src='./gcdTextures/texTwo/red.jpg' />} />
+
+                                <FormControlLabel value={2} control={<Radio />} label={<img className='grey' src='./gcdTextures/texThree/yellow.jpg' />} />
+                              </RadioGroup>
+                            </FormControl>
+                          </div>
+                          {/* </Box> */}
+
+                        </>
+                      )}
+                    </FormGroup>
+
+
+
+                    {/* Flower Interface */}
+
+
+                    {/* <Box className="glass" p={2}> */}
+                    <FormGroup>
+                      <FormLabel>Flowers</FormLabel>
+                      <FormControlLabel
+                        required control={<Checkbox />}
+                        onChange={handleChangeSeven}
+                        label="Flower 1"
+                      />
+
+                      {gazeboCeilingFlowerOne && (
+                        <>
+                          <Box className="glass" p={2}>
+                            <FormControl>
+                              <FormLabel>Textures</FormLabel>
+                              <RadioGroup
+                                value={gcfOneTexture}
+                                onChange={(e) => setGcfOneTexture(e.target.value)}
+                              >
+                                <FormControlLabel
+                                  value="gcfOneTextureOne"
+                                  control={<Radio />}
+                                  label="Texture 1"
+                                />
+                                <FormControlLabel value="gcfOneTextureTwo" control={<Radio />} label="Texture 2" />
+                                <FormControlLabel value="gcfOneTextureThree" control={<Radio />} label="Texture 3" />
+                              </RadioGroup>
+                            </FormControl>
+                          </Box>
+
+                        </>
+                      )}
+
+                      <FormControlLabel
+                        required control={<Checkbox />}
+                        onChange={handleChangeEight}
+                        label="Flower 2"
+                      />
+
+                      {gazeboCeilingFlowerTwo && (
+                        <>
+                          <Box className="glass" p={2}>
+                            <FormControl>
+                              <FormLabel>Textures</FormLabel>
+                              <RadioGroup
+                                value={gcfTwoTexture}
+                                onChange={(e) => setGcfTwoTexture(e.target.value)}
+                              >
+                                <FormControlLabel
+                                  value="gcfTwoTextureOne"
+                                  control={<Radio />}
+                                  label="Texture 1"
+                                />
+                                <FormControlLabel value="gcfTwoTextureTwo" control={<Radio />} label="Texture 2" />
+                                <FormControlLabel value="gcfTwoTextureThree" control={<Radio />} label="Texture 3" />
+                              </RadioGroup>
+                            </FormControl>
+                          </Box>
+
+                        </>
+                      )}
+
+                      <FormControlLabel
+                        required control={<Checkbox />}
+                        onChange={handleChangeNine}
+                        label="Flower 3"
+                      />
+                      {gazeboCeilingFlowerThree && (
+                        <>
+                          <Box className="glass" p={2}>
+                            <FormControl>
+                              <FormLabel>Textures</FormLabel>
+                              <RadioGroup
+                                value={gcfThreeTexture}
+                                onChange={(e) => setGcfThreeTexture(e.target.value)}
+                              >
+                                <FormControlLabel
+                                  value="gcfThreeTextureOne"
+                                  control={<Radio />}
+                                  label="Texture 1"
+                                />
+                                <FormControlLabel value="gcfThreeTextureTwo" control={<Radio />} label="Texture 2" />
+                                <FormControlLabel value="gcfThreeTextureThree" control={<Radio />} label="Texture 3" />
+                              </RadioGroup>
+                            </FormControl>
+                          </Box>
+
+                        </>
+                      )}
+                    </FormGroup>
+                    {/* </Box> */}
+
+
+                    {/* Props Interface */}
+
+
+                    {/* <Box className="glass" p={2}> */}
+                    <FormControl>
+                      <FormLabel>Props</FormLabel>
+                      <RadioGroup
+                        value={gazeboCeilingProps}
+                        onChange={(e) => setGazeboCeilingProps(e.target.value)}
+                      >
+                        <FormControlLabel
+                          value="gcpOne"
+                          control={<Radio />}
+                          label="Props 1"
+                        />
+                        <FormControlLabel value="gcpTwo" control={<Radio />} label="Props 2" />
+                        <FormControlLabel value="gcpThree" control={<Radio />} label="Props 3" />
+                        <FormControlLabel value="gcpFour" control={<Radio />} label="Props 4" />
+
+                      </RadioGroup>
+                    </FormControl>
+                    {/* </Box> */}
+
+
+
+
+                  </>
+                )}
+
+
+
+
+
+
+                {/*  slider control
             
             <Box className="glass" p={2}>
               <FormControl>
@@ -387,7 +731,7 @@ export const Interface = () => {
             </Box> */}
 
 
-            {/* <Box className="glass" p={2}>
+                {/* <Box className="glass" p={2}>
               <FormControl>
                 <FormLabel>Ceiling Layout</FormLabel>
                 <RadioGroup
@@ -406,7 +750,7 @@ export const Interface = () => {
             </Box> */}
 
 
-            {/* <Box className="glass" p={2}>
+                {/* <Box className="glass" p={2}>
               <FormControl>
                 <FormLabel>Ceiling Color</FormLabel>
                 <RadioGroup
@@ -437,33 +781,292 @@ export const Interface = () => {
               </FormControl>
             </Box> */}
 
-          </>
-        )}
+              </>
+            )}
 
-        {part === 'lawn' && (
-          <>
-            <Box className="glass" p={2}>
-              <FormControl>
-                <FormLabel>Ball Layout</FormLabel>
-                <RadioGroup
-                  value={ball}
-                  onChange={(e) => setBall(e.target.value)}
+            {part === 'lawn' && (
+              <>
+
+                <LawnInterface />
+
+                {/* <ToggleButtonGroup
+                  className='toggleGazebo'
+                  color="primary"
+                  value={lawnPart}
+                  exclusive
+                  onChange={handleChangeTen}
+                  aria-label="gazeboPart"
                 >
-                  <FormControlLabel
-                    value='ballA'
-                    control={<Radio />}
-                    label="Ball One"
-                  />
-                  <FormControlLabel value='ballB' control={<Radio />} label="Ball Two" />
-                  <FormControlLabel value='ballC' control={<Radio />} label="Ball Three" />
-                </RadioGroup>
-              </FormControl>
-            </Box>
+                  <ToggleButton className='toggleGazebo' value="lawnCeiling">Ceiling</ToggleButton>
+                  <ToggleButton className='toggleGazebo' value="lawnPillars">Pillars</ToggleButton>
+                  <ToggleButton className='toggleGazebo' value="lawnFloor">Floor</ToggleButton>
+                  <ToggleButton className='toggleGazebo' value="lawnSeats">Seats</ToggleButton>
 
-          </>
-        )}
+                </ToggleButtonGroup>
+                <br /><br />
 
-      </Stack>
-    </Box>
+                {lawnPart === 'lawnCeiling' && (
+                  <>
+
+                    <FormGroup>
+                      <FormLabel>Drapes</FormLabel>
+                      <FormControlLabel
+                        required control={<Checkbox />}
+                        onChange={handleChangeEleven}
+                        label="Drape 1"
+                      />
+
+                      {lawnCeilingDrapeOne && (
+                        <>
+                    
+                          <div className='gcdDiv'>
+                            <FormControl>
+                  
+                              <RadioGroup
+                                value={lcdOneTexture}
+                                onChange={(e) => setLcdOneTexture(parseInt(e.target.value))}
+                                className='gcdTexture'
+                              >
+                                <FormControlLabel
+                                  value={0}
+                                  control={<Radio />}
+                                  label={<img className='grey' src='./gcdTextures/texOne/grey.jpg' />}
+                                />
+
+                                <FormControlLabel value={1} control={<Radio />} label={<img className='grey' src='./gcdTextures/texTwo/red.jpg' />} />
+
+                                <FormControlLabel value={2} control={<Radio />} label={<img className='grey' src='./gcdTextures/texThree/yellow.jpg' />} />
+                              </RadioGroup>
+                            </FormControl>
+                          </div>
+              
+
+                        </>
+                      )}
+
+                      <FormControlLabel
+                        required control={<Checkbox />}
+                        onChange={handleChangeTwelve}
+                        label="Drape 2"
+                      />
+
+                      {lawnCeilingDrapeTwo && (
+                        <>
+             
+                          <div className='gcd2Div'>
+                            <FormControl>
+               
+                              <RadioGroup
+                                value={lcdTwoTexture}
+                                onChange={(e) => setLcdTwoTexture(parseInt(e.target.value))}
+                                className='gcdTexture'
+                              >
+                                <FormControlLabel
+                                  value={0}
+                                  control={<Radio />}
+                                  label={<img className='grey' src='./gcdTextures/texOne/grey.jpg' />}
+                                />
+
+                                <FormControlLabel value={1} control={<Radio />} label={<img className='grey' src='./gcdTextures/texTwo/red.jpg' />} />
+
+                                <FormControlLabel value={2} control={<Radio />} label={<img className='grey' src='./gcdTextures/texThree/yellow.jpg' />} />
+                              </RadioGroup>
+                            </FormControl>
+                          </div>
+                   
+                        </>
+                      )}
+
+                      <FormControlLabel
+                        required control={<Checkbox />}
+                        onChange={handleChangeThirteen}
+                        label="Drape 3"
+                      />
+                      {lawnCeilingDrapeThree && (
+                        <>
+                  
+                          <div className='gcd3Div'>
+                            <FormControl>
+                 
+                              <RadioGroup
+                                value={lcdThreeTexture}
+                                onChange={(e) => setLcdThreeTexture(parseInt(e.target.value))}
+                                className='gcdTexture'
+                              >
+                                <FormControlLabel
+                                  value={0}
+                                  control={<Radio />}
+                                  label={<img className='grey' src='./gcdTextures/texOne/grey.jpg' />}
+                                />
+
+                                <FormControlLabel value={1} control={<Radio />} label={<img className='grey' src='./gcdTextures/texTwo/red.jpg' />} />
+
+                                <FormControlLabel value={2} control={<Radio />} label={<img className='grey' src='./gcdTextures/texThree/yellow.jpg' />} />
+                              </RadioGroup>
+                            </FormControl>
+                          </div>
+                 
+
+                        </>
+                      )}
+
+                      <FormControlLabel
+                        required control={<Checkbox />}
+                        onChange={handleChangeForteen}
+                        label="Drape 4"
+                      />
+                      {lawnCeilingDrapeFour && (
+                        <>
+    
+                          <div className='gcd4Div'>
+                            <FormControl>
+                  
+                              <RadioGroup
+                                value={lcdFourTexture}
+                                onChange={(e) => setLcdFourTexture(parseInt(e.target.value))}
+                                className='gcdTexture'
+                              >
+                                <FormControlLabel
+                                  value={0}
+                                  control={<Radio />}
+                                  label={<img className='grey' src='./gcdTextures/texOne/grey.jpg' />}
+                                />
+
+                                <FormControlLabel value={1} control={<Radio />} label={<img className='grey' src='./gcdTextures/texTwo/red.jpg' />} />
+
+                                <FormControlLabel value={2} control={<Radio />} label={<img className='grey' src='./gcdTextures/texThree/yellow.jpg' />} />
+                              </RadioGroup>
+                            </FormControl>
+                          </div>
+            
+
+                        </>
+                      )}
+
+
+                    </FormGroup>
+
+
+                    <FormGroup>
+                      <FormLabel>Flowers</FormLabel>
+                      <FormControlLabel
+                        required control={<Checkbox />}
+                        onChange={handleChangeSeven}
+                        label="Flower 1"
+                      />
+
+                      {lawnCeilingFlowerOne && (
+                        <>
+                          <Box className="glass" p={2}>
+                            <FormControl>
+                              <FormLabel>Textures</FormLabel>
+                              <RadioGroup
+                                value={gcfOneTexture}
+                                onChange={(e) => setGcfOneTexture(e.target.value)}
+                              >
+                                <FormControlLabel
+                                  value="gcfOneTextureOne"
+                                  control={<Radio />}
+                                  label="Texture 1"
+                                />
+                                <FormControlLabel value="gcfOneTextureTwo" control={<Radio />} label="Texture 2" />
+                                <FormControlLabel value="gcfOneTextureThree" control={<Radio />} label="Texture 3" />
+                              </RadioGroup>
+                            </FormControl>
+                          </Box>
+
+                        </>
+                      )}
+
+                      <FormControlLabel
+                        required control={<Checkbox />}
+                        onChange={handleChangeEight}
+                        label="Flower 2"
+                      />
+
+                      {lawnCeilingFlowerTwo && (
+                        <>
+                          <Box className="glass" p={2}>
+                            <FormControl>
+                              <FormLabel>Textures</FormLabel>
+                              <RadioGroup
+                                value={gcfTwoTexture}
+                                onChange={(e) => setGcfTwoTexture(e.target.value)}
+                              >
+                                <FormControlLabel
+                                  value="gcfTwoTextureOne"
+                                  control={<Radio />}
+                                  label="Texture 1"
+                                />
+                                <FormControlLabel value="gcfTwoTextureTwo" control={<Radio />} label="Texture 2" />
+                                <FormControlLabel value="gcfTwoTextureThree" control={<Radio />} label="Texture 3" />
+                              </RadioGroup>
+                            </FormControl>
+                          </Box>
+
+                        </>
+                      )}
+
+                      <FormControlLabel
+                        required control={<Checkbox />}
+                        onChange={handleChangeNine}
+                        label="Flower 3"
+                      />
+                      {lawnCeilingFlowerThree && (
+                        <>
+                          <Box className="glass" p={2}>
+                            <FormControl>
+                              <FormLabel>Textures</FormLabel>
+                              <RadioGroup
+                                value={gcfThreeTexture}
+                                onChange={(e) => setGcfThreeTexture(e.target.value)}
+                              >
+                                <FormControlLabel
+                                  value="gcfThreeTextureOne"
+                                  control={<Radio />}
+                                  label="Texture 1"
+                                />
+                                <FormControlLabel value="gcfThreeTextureTwo" control={<Radio />} label="Texture 2" />
+                                <FormControlLabel value="gcfThreeTextureThree" control={<Radio />} label="Texture 3" />
+                              </RadioGroup>
+                            </FormControl>
+                          </Box>
+
+                        </>
+                      )}
+                    </FormGroup>
+    
+                    <FormControl>
+                      <FormLabel>Props</FormLabel>
+                      <RadioGroup
+                        value={lawnCeilingProps}
+                        onChange={(e) => setGazeboCeilingProps(e.target.value)}
+                      >
+                        <FormControlLabel
+                          value="gcpOne"
+                          control={<Radio />}
+                          label="Props 1"
+                        />
+                        <FormControlLabel value="gcpTwo" control={<Radio />} label="Props 2" />
+                        <FormControlLabel value="gcpThree" control={<Radio />} label="Props 3" />
+                        <FormControlLabel value="gcpFour" control={<Radio />} label="Props 4" />
+
+                      </RadioGroup>
+                    </FormControl> 
+
+                  </>
+                )}
+
+
+              */}
+
+              </>
+            )}
+          </div>
+
+        </Box>
+      </Stack >
+
+    </Box >
   );
 };

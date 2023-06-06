@@ -4,6 +4,9 @@ import { React, useRef } from 'react'
 import { useConfigurator } from "../contexts/Configurator";
 // import { Grinder } from './Grinder';
 import { Gazebo2 } from './Gazebo2';
+import { GCD } from './Gcd';
+import { Lcd } from './Lcd';
+// import { Bandstand } from './Bandstand';
 // import { Curtain1 } from './Curtain1';
 // import { Curtain2 } from './Curtain2';
 // import { HangingBells } from './HangingBells';
@@ -56,22 +59,25 @@ export const Experience = ({ env = './scene/field.hdr' }) => {
       {/* <Curtain1 position={[0, 0, 0]} /> */}
       {/* <Curtain2 position={[0, 0, 0]} /> */}
       {/* <HangingBells position={[0, 0, 8]} /> */}
-      <Gazebo2 position={[0, 0, 1]} />
+
+      {/* <Gazebo2 position={[0, 0, 1]} /> */}
+      <GCD position={[0, 0, 0]} />
+      <Lcd position={[0, 0, 0]} />
+
+      {/* <Bandstand position={[0, 0, 1]} /> */}
+
 
 
       {/* <Grinder position={[0, 0, 0]} /> */}
       {/* </TransformControls> */}
 
 
-
-
-
       <OrbitControls
         makeDefault
         minPolarAngle={0}
         minDistance={1}
-        maxDistance={20}
-        maxPolarAngle={Math.PI / 2} />
+        maxDistance={19}
+        maxPolarAngle={Math.PI / 1.5} />
       {/* </PresentationControls> */}
     </>
 

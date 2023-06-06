@@ -42,3 +42,14 @@ html {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
+
+
+@media screen and (max-width: 464px) {
+
+
+  /* .myapp {
+    width: 100vw;
+    height: 100vh;
+    top: 10rem;
+  } */
+}
