@@ -14,27 +14,27 @@
 }
 
 .gcdDiv {
-    position: absolute;
+    /* position: absolute; */
     left: 30%;
-    margin: 4% 0 0 0;
+    margin: 0% 0 0 0;
 }
 
 .gcd2Div {
-    position: absolute;
+    /* position: absolute; */
     left: 30%;
-    margin: 13% 0 0 0;
+    /* margin: 13% 0 0 0; */
 }
 
 .gcd3Div {
-    position: absolute;
+    /* position: absolute; */
     left: 30%;
-    margin: 21% 0 0 0;
+    /* margin: 21% 0 0 0; */
 }
 
 .gcd4Div {
-    position: absolute;
+    /* position: absolute; */
     left: 30%;
-    margin: 29% 0 0 0;
+    /* margin: 29% 0 0 0; */
 }
 
 .grey {
@@ -47,6 +47,27 @@
     width: 30rem;
 }
 
+/* HIDE RADIO */
+.hiddenradio [type=radio] {
+    position: absolute !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+/* IMAGE STYLES */
+.hiddenradio [type=radio]+img {
+    cursor: pointer !important;
+}
+
+/* CHECKED STYLES */
+.hiddenradio [type=radio]:checked+img {
+    outline: 2px solid #f00 !important;
+}
+
+.radioImg {
+    margin: 10px;
+}
 
 /* @media screen and (max-width: 464px) {
     .gazeboPanel {

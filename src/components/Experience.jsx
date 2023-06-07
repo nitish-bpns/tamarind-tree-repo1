@@ -6,6 +6,10 @@ import { useConfigurator } from "../contexts/Configurator";
 import { Gazebo2 } from './Gazebo2';
 import { GCD } from './Gcd';
 import { Lcd } from './Lcd';
+import { Gpd } from './Gpd';
+import { Lpd } from './Lpd';
+import { TestFlowers } from './TestFlowers';
+import { Gfsl } from './Gfsl';
 // import { Bandstand } from './Bandstand';
 // import { Curtain1 } from './Curtain1';
 // import { Curtain2 } from './Curtain2';
@@ -47,7 +51,6 @@ export const Experience = ({ env = './scene/field.hdr' }) => {
       {/* <TransformControls mode="scale"> */}
       {/* <TransformControls mode="translate"> */}
       {/* <TransformControls mode="rotate"> */}
-
       {/* <Table /> */}
       {/* </TransformControls> */}
       {/* </TransformControls> */}
@@ -59,15 +62,16 @@ export const Experience = ({ env = './scene/field.hdr' }) => {
       {/* <Curtain1 position={[0, 0, 0]} /> */}
       {/* <Curtain2 position={[0, 0, 0]} /> */}
       {/* <HangingBells position={[0, 0, 8]} /> */}
-
       {/* <Gazebo2 position={[0, 0, 1]} /> */}
-      <GCD position={[0, 0, 0]} />
-      <Lcd position={[0, 0, 0]} />
+
+      <GCD position={[0, 0.5, 0]} />
+      <Lcd position={[0, 0.5, 0]} />
+      <Gpd position={[0, 0.5, 0]} />
+      <Lpd position={[0, 0.5, 0]} />
+      <TestFlowers position={[0, 0.5, 0]} />
+      <Gfsl position={[0, 0.5, 0]} />
 
       {/* <Bandstand position={[0, 0, 1]} /> */}
-
-
-
       {/* <Grinder position={[0, 0, 0]} /> */}
       {/* </TransformControls> */}
 
@@ -77,7 +81,7 @@ export const Experience = ({ env = './scene/field.hdr' }) => {
         minPolarAngle={0}
         minDistance={1}
         maxDistance={19}
-        maxPolarAngle={Math.PI / 1.5} />
+        maxPolarAngle={Math.PI / 1.8} />
       {/* </PresentationControls> */}
     </>
 

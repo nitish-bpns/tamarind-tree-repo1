@@ -31,6 +31,11 @@ export const ConfiguratorProvider = ({ children }) => {
     const [gpdTwoTexture, setGpdTwoTexture] = useState(0);
     const [gpdThreeTexture, setGpdThreeTexture] = useState(0);
 
+    //gazebo seats
+    const [gazeboSeatOne, setGazeboSeatOne] = useState(false);
+    const [gazeboSeatTwo, setGazeboSeatTwo] = useState(false);
+    const [gazeboSeatThree, setGazeboSeatThree] = useState(false);
+
     // Lawn
     const [lawnCeilingDrapeOne, setLawnCeilingDrapeOne] = useState(false);
     const [lawnCeilingDrapeTwo, setLawnCeilingDrapeTwo] = useState(false);
@@ -49,6 +54,11 @@ export const ConfiguratorProvider = ({ children }) => {
         setLawnCeilingFlowerThree,] = useState(false);
 
 
+    //lawn pillars
+    const [lawnPillarDrapeOne, setLawnPillarDrapeOne] = useState(false);
+    const [lawnPillarDrapeTwo, setLawnPillarDrapeTwo] = useState(false);
+    const [lpdOneTexture, setLpdOneTexture] = useState(0);
+    const [lpdTwoTexture, setLpdTwoTexture] = useState(0);
 
 
     return <ConfiguratorContext.Provider value={{
@@ -99,6 +109,14 @@ export const ConfiguratorProvider = ({ children }) => {
         gpdThreeTexture,
         setGpdThreeTexture,
 
+        //Gazebo Sitting
+        gazeboSeatOne,
+        setGazeboSeatOne,
+        gazeboSeatTwo,
+        setGazeboSeatTwo,
+        gazeboSeatThree,
+        setGazeboSeatThree,
+
         //Lawn
         lawnCeilingDrapeOne,
         setLawnCeilingDrapeOne,
@@ -123,6 +141,16 @@ export const ConfiguratorProvider = ({ children }) => {
         setLawnCeilingFlowerTwo,
         lawnCeilingFlowerThree,
         setLawnCeilingFlowerThree,
+
+        // lawn pillars
+        lawnPillarDrapeOne,
+        setLawnPillarDrapeOne,
+        lawnPillarDrapeTwo,
+        setLawnPillarDrapeTwo,
+        lpdOneTexture,
+        setLpdOneTexture,
+        lpdTwoTexture,
+        setLpdTwoTexture,
 
 
     }}>

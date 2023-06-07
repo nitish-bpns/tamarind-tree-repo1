@@ -51,6 +51,17 @@ export const LawnInterface = () => {
         setLawnCeilingProps,
 
 
+        // lawn pillars
+        lawnPillarDrapeOne,
+        setLawnPillarDrapeOne,
+        lawnPillarDrapeTwo,
+        setLawnPillarDrapeTwo,
+        lpdOneTexture,
+        setLpdOneTexture,
+        lpdTwoTexture,
+        setLpdTwoTexture,
+
+
     } = useConfigurator();
 
 
@@ -87,6 +98,18 @@ export const LawnInterface = () => {
     const handleChangeNine = event => {
         setGazeboCeilingFlowerThree(current => !current);
     };
+
+    // lawn pillars
+    const handleChangeEighteen = event => {
+        setLawnPillarDrapeOne(current => !current);
+    };
+    const handleChangeNineteen = event => {
+        setLawnPillarDrapeTwo(current => !current);
+    };
+    const handleChangeTwenty = event => {
+        setLawnPillarDrapeThree(current => !current);
+    };
+
 
     console.log({
         lawnCeilingDrapeOne, lcdOneTexture, lcdTwoTexture
@@ -139,9 +162,50 @@ export const LawnInterface = () => {
                                                 label={<img className='grey' src='./gcdTextures/texOne/grey.jpg' />}
                                             />
 
-                                            <FormControlLabel value={1} control={<Radio />} label={<img className='grey' src='./gcdTextures/texTwo/red.jpg' />} />
+                                            <FormControlLabel
+                                                value={1}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texTwo/red.jpg' />} />
 
-                                            <FormControlLabel value={2} control={<Radio />} label={<img className='grey' src='./gcdTextures/texThree/yellow.jpg' />} />
+                                            <FormControlLabel
+                                                value={2}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texThree/yellow.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={3}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texFour/cream.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={4}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texFive/translucent.png' />} />
+
+                                            <FormControlLabel
+                                                value={5}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texSix/lightGreen.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={6}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texSeven/orange.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={7}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texEight/lightPink.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={8}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texNine/lightVelvet.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={9}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texTen/blue.jpg' />} />
                                         </RadioGroup>
                                     </FormControl>
                                 </div>
@@ -173,9 +237,50 @@ export const LawnInterface = () => {
                                                 label={<img className='grey' src='./gcdTextures/texOne/grey.jpg' />}
                                             />
 
-                                            <FormControlLabel value={1} control={<Radio />} label={<img className='grey' src='./gcdTextures/texTwo/red.jpg' />} />
+                                            <FormControlLabel
+                                                value={1}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texTwo/red.jpg' />} />
 
-                                            <FormControlLabel value={2} control={<Radio />} label={<img className='grey' src='./gcdTextures/texThree/yellow.jpg' />} />
+                                            <FormControlLabel
+                                                value={2}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texThree/yellow.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={3}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texFour/cream.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={4}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texFive/translucent.png' />} />
+
+                                            <FormControlLabel
+                                                value={5}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texSix/lightGreen.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={6}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texSeven/orange.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={7}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texEight/lightPink.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={8}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texNine/lightVelvet.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={9}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texTen/blue.jpg' />} />
                                         </RadioGroup>
                                     </FormControl>
                                 </div>
@@ -205,9 +310,50 @@ export const LawnInterface = () => {
                                                 label={<img className='grey' src='./gcdTextures/texOne/grey.jpg' />}
                                             />
 
-                                            <FormControlLabel value={1} control={<Radio />} label={<img className='grey' src='./gcdTextures/texTwo/red.jpg' />} />
+                                            <FormControlLabel
+                                                value={1}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texTwo/red.jpg' />} />
 
-                                            <FormControlLabel value={2} control={<Radio />} label={<img className='grey' src='./gcdTextures/texThree/yellow.jpg' />} />
+                                            <FormControlLabel
+                                                value={2}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texThree/yellow.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={3}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texFour/cream.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={4}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texFive/translucent.png' />} />
+
+                                            <FormControlLabel
+                                                value={5}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texSix/lightGreen.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={6}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texSeven/orange.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={7}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texEight/lightPink.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={8}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texNine/lightVelvet.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={9}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texTen/blue.jpg' />} />
                                         </RadioGroup>
                                     </FormControl>
                                 </div>
@@ -223,10 +369,10 @@ export const LawnInterface = () => {
                         />
                         {lawnCeilingDrapeFour && (
                             <>
-                                {/* <Box className="glass" p={0}> */}
+
                                 <div className='gcd4Div'>
                                     <FormControl>
-                                        {/* <FormLabel>Textures</FormLabel> */}
+
                                         <RadioGroup
                                             value={lcdFourTexture}
                                             onChange={(e) => setLcdFourTexture(parseInt(e.target.value))}
@@ -238,9 +384,50 @@ export const LawnInterface = () => {
                                                 label={<img className='grey' src='./gcdTextures/texOne/grey.jpg' />}
                                             />
 
-                                            <FormControlLabel value={1} control={<Radio />} label={<img className='grey' src='./gcdTextures/texTwo/red.jpg' />} />
+                                            <FormControlLabel
+                                                value={1}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texTwo/red.jpg' />} />
 
-                                            <FormControlLabel value={2} control={<Radio />} label={<img className='grey' src='./gcdTextures/texThree/yellow.jpg' />} />
+                                            <FormControlLabel
+                                                value={2}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texThree/yellow.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={3}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texFour/cream.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={4}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texFive/translucent.png' />} />
+
+                                            <FormControlLabel
+                                                value={5}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texSix/lightGreen.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={6}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texSeven/orange.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={7}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texEight/lightPink.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={8}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texNine/lightVelvet.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={9}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texTen/blue.jpg' />} />
                                         </RadioGroup>
                                     </FormControl>
                                 </div>
@@ -377,6 +564,312 @@ export const LawnInterface = () => {
 
                 </>
             )}
+
+
+
+
+
+
+
+
+            {lawnPart === 'lawnPillars' && (
+                <>
+
+                    <FormGroup>
+                        <FormLabel>Drapes</FormLabel>
+                        <FormControlLabel
+                            required control={<Checkbox />}
+                            onChange={handleChangeEighteen}
+                            label="Drape 1"
+                        />
+
+                        {lawnPillarDrapeOne && (
+                            <>
+                                {/* <Box className="glass" p={0}> */}
+                                <div className='gcdDiv'>
+                                    <FormControl>
+                                        {/* <FormLabel>Textures</FormLabel> */}
+                                        <RadioGroup
+                                            value={lpdOneTexture}
+                                            onChange={(e) => setLpdOneTexture(parseInt(e.target.value))}
+                                            className='gcdTexture'
+                                        >
+                                            <FormControlLabel
+                                                value={0}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texOne/grey.jpg' />}
+                                            />
+
+                                            <FormControlLabel
+                                                value={1}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texTwo/red.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={2}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texThree/yellow.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={3}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texFour/cream.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={4}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texFive/translucent.png' />} />
+
+                                            <FormControlLabel
+                                                value={5}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texSix/lightGreen.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={6}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texSeven/orange.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={7}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texEight/lightPink.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={8}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texNine/lightVelvet.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={9}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texTen/blue.jpg' />} />
+
+                                        </RadioGroup>
+                                    </FormControl>
+                                </div>
+                                {/* </Box> */}
+
+                            </>
+                        )}
+
+                        <FormControlLabel
+                            required control={<Checkbox />}
+                            onChange={handleChangeNineteen}
+                            label="Drape 2"
+                        />
+
+                        {lawnPillarDrapeTwo && (
+                            <>
+                                {/* <Box className="glass" p={0}> */}
+                                <div className='gcd2Div'>
+                                    <FormControl>
+                                        {/* <FormLabel>Textures</FormLabel> */}
+                                        <RadioGroup
+                                            value={lpdTwoTexture}
+                                            onChange={(e) => setLpdTwoTexture(parseInt(e.target.value))}
+                                            className='gcdTexture'
+                                        >
+                                            <FormControlLabel
+                                                value={0}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texOne/grey.jpg' />}
+                                            />
+
+                                            <FormControlLabel
+                                                value={1}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texTwo/red.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={2}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texThree/yellow.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={3}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texFour/cream.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={4}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texFive/translucent.png' />} />
+
+                                            <FormControlLabel
+                                                value={5}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texSix/lightGreen.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={6}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texSeven/orange.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={7}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texEight/lightPink.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={8}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texNine/lightVelvet.jpg' />} />
+
+                                            <FormControlLabel
+                                                value={9}
+                                                control={<Radio />}
+                                                label={<img className='grey' src='./gcdTextures/texTen/blue.jpg' />} />
+
+                                        </RadioGroup>
+                                    </FormControl>
+                                </div>
+                            </>
+                        )}
+
+                    </FormGroup>
+
+
+
+                    {/* Flower Interface */}
+
+
+                    {/* <Box className="glass" p={2}> */}
+                    <FormGroup>
+                        <FormLabel>Flowers</FormLabel>
+                        <FormControlLabel
+                            required control={<Checkbox />}
+                            onChange={handleChangeSeven}
+                            label="Flower 1"
+                        />
+
+                        {lawnCeilingFlowerOne && (
+                            <>
+                                <Box className="glass" p={2}>
+                                    <FormControl>
+                                        <FormLabel>Textures</FormLabel>
+                                        <RadioGroup
+                                            value={gcfOneTexture}
+                                            onChange={(e) => setGcfOneTexture(e.target.value)}
+                                        >
+                                            <FormControlLabel
+                                                value="gcfOneTextureOne"
+                                                control={<Radio />}
+                                                label="Texture 1"
+                                            />
+                                            <FormControlLabel value="gcfOneTextureTwo" control={<Radio />} label="Texture 2" />
+                                            <FormControlLabel value="gcfOneTextureThree" control={<Radio />} label="Texture 3" />
+                                        </RadioGroup>
+                                    </FormControl>
+                                </Box>
+
+                            </>
+                        )}
+
+                        <FormControlLabel
+                            required control={<Checkbox />}
+                            onChange={handleChangeEight}
+                            label="Flower 2"
+                        />
+
+                        {/* {lawnCeilingFlowerTwo && (
+                            <>
+                                <Box className="glass" p={2}>
+                                    <FormControl>
+                                        <FormLabel>Textures</FormLabel>
+                                        <RadioGroup
+                                            value={gcfTwoTexture}
+                                            onChange={(e) => setGcfTwoTexture(e.target.value)}
+                                        >
+                                            <FormControlLabel
+                                                value="gcfTwoTextureOne"
+                                                control={<Radio />}
+                                                label="Texture 1"
+                                            />
+                                            <FormControlLabel value="gcfTwoTextureTwo" control={<Radio />} label="Texture 2" />
+                                            <FormControlLabel value="gcfTwoTextureThree" control={<Radio />} label="Texture 3" />
+                                        </RadioGroup>
+                                    </FormControl>
+                                </Box>
+
+                            </>
+                        )} */}
+
+                        {/* <FormControlLabel
+                            required control={<Checkbox />}
+                            onChange={handleChangeNine}
+                            label="Flower 3"
+                        />
+                        {lawnCeilingFlowerThree && (
+                            <>
+                                <Box className="glass" p={2}>
+                                    <FormControl>
+                                        <FormLabel>Textures</FormLabel>
+                                        <RadioGroup
+                                            value={gcfThreeTexture}
+                                            onChange={(e) => setGcfThreeTexture(e.target.value)}
+                                        >
+                                            <FormControlLabel
+                                                value="gcfThreeTextureOne"
+                                                control={<Radio />}
+                                                label="Texture 1"
+                                            />
+                                            <FormControlLabel value="gcfThreeTextureTwo" control={<Radio />} label="Texture 2" />
+                                            <FormControlLabel value="gcfThreeTextureThree" control={<Radio />} label="Texture 3" />
+                                        </RadioGroup>
+                                    </FormControl>
+                                </Box>
+
+                            </>
+                        )} */}
+                    </FormGroup>
+                    {/* </Box> */}
+
+
+                    {/* Props Interface */}
+
+
+                    {/* <Box className="glass" p={2}> */}
+                    {/* <FormControl>
+                        <FormLabel>Props</FormLabel>
+                        <RadioGroup
+                            value={gazeboCeilingProps}
+                            onChange={(e) => setGazeboCeilingProps(e.target.value)}
+                        >
+                            <FormControlLabel
+                                value="gcpOne"
+                                control={<Radio />}
+                                label="Props 1"
+                            />
+                            <FormControlLabel value="gcpTwo" control={<Radio />} label="Props 2" />
+                            <FormControlLabel value="gcpThree" control={<Radio />} label="Props 3" />
+                            <FormControlLabel value="gcpFour" control={<Radio />} label="Props 4" />
+
+                        </RadioGroup>
+                    </FormControl> */}
+                    {/* </Box> */}
+
+
+
+
+                </>
+            )}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         </>
     );
