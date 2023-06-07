@@ -8,7 +8,7 @@ export const ConfiguratorProvider = ({ children }) => {
     const [tableWidth, setTableWidth] = useState(100);
     const [ball, setBall] = useState('ballA');
     const [gazeboCeilingDrapeOne, setGazeboCeilingDrapeOne] = useState(false);
-    const [gazeboCeilingDrapeTwo, setGazeboCeilingDrapeTwo] = useState(false);
+    const [gazeboCeilingDrapeTwo, setGazeboCeilingDrapeTwo] = useState(true);
     const [gazeboCeilingDrapeThree, setGazeboCeilingDrapeThree] = useState(false);
     const [gcdOneTexture, setGcdOneTexture] = useState(0);
     const [gcdTwoTexture, setGcdTwoTexture] = useState(0);
@@ -25,7 +25,7 @@ export const ConfiguratorProvider = ({ children }) => {
 
     //gazebo pillars
     const [gazeboPillarDrapeOne, setGazeboPillarDrapeOne] = useState(false);
-    const [gazeboPillarDrapeTwo, setGazeboPillarDrapeTwo] = useState(false);
+    const [gazeboPillarDrapeTwo, setGazeboPillarDrapeTwo] = useState(true);
     const [gazeboPillarDrapeThree, setGazeboPillarDrapeThree] = useState(false);
     const [gpdOneTexture, setGpdOneTexture] = useState(0);
     const [gpdTwoTexture, setGpdTwoTexture] = useState(0);
@@ -33,14 +33,14 @@ export const ConfiguratorProvider = ({ children }) => {
 
     //gazebo seats
     const [gazeboSeatOne, setGazeboSeatOne] = useState(false);
-    const [gazeboSeatTwo, setGazeboSeatTwo] = useState(false);
+    const [gazeboSeatTwo, setGazeboSeatTwo] = useState(true);
     const [gazeboSeatThree, setGazeboSeatThree] = useState(false);
 
     // Lawn
     const [lawnCeilingDrapeOne, setLawnCeilingDrapeOne] = useState(false);
     const [lawnCeilingDrapeTwo, setLawnCeilingDrapeTwo] = useState(false);
     const [lawnCeilingDrapeThree, setLawnCeilingDrapeThree] = useState(false);
-    const [lawnCeilingDrapeFour, setLawnCeilingDrapeFour] = useState(false);
+    const [lawnCeilingDrapeFour, setLawnCeilingDrapeFour] = useState(true);
     const [lcdOneTexture, setLcdOneTexture] = useState(0);
     const [lcdTwoTexture, setLcdTwoTexture] = useState(0);
     const [lcdThreeTexture, setLcdThreeTexture] = useState(0);
@@ -56,7 +56,7 @@ export const ConfiguratorProvider = ({ children }) => {
 
     //lawn pillars
     const [lawnPillarDrapeOne, setLawnPillarDrapeOne] = useState(false);
-    const [lawnPillarDrapeTwo, setLawnPillarDrapeTwo] = useState(false);
+    const [lawnPillarDrapeTwo, setLawnPillarDrapeTwo] = useState(true);
     const [lpdOneTexture, setLpdOneTexture] = useState(0);
     const [lpdTwoTexture, setLpdTwoTexture] = useState(0);
 

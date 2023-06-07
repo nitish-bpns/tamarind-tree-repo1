@@ -11,7 +11,7 @@ export function TestFlowers(props) {
   const { nodes, materials, animations } = useGLTF('./models/testFlowers.gltf')
   const { actions } = useAnimations(animations, group)
   return (
-    <group ref={group} {...props} dispose={null} scale={[0.3, 0.3, 0.3]} visible={false} >
+    <group ref={group} {...props} dispose={null} scale={[0.3, 0.3, 0.3]} visible={true} >
       <group name="Scene">
         <mesh name="Plane" geometry={nodes.Plane.geometry} material={materials['Material.003']} position={[-14.58, 0.51, -11.56]} rotation={[0, -0.45, -Math.PI / 2]} scale={[2.14, 4.57, 2.9]} />
         <mesh name="Torus001" geometry={nodes.Torus001.geometry} material={materials['Material.002']} position={[-11.73, 2.54, -10.24]} scale={1.07} />

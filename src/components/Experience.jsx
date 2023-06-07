@@ -68,7 +68,7 @@ export const Experience = ({ env = './scene/field.hdr' }) => {
       <Lcd position={[0, 0.5, 0]} />
       <Gpd position={[0, 0.5, 0]} />
       <Lpd position={[0, 0.5, 0]} />
-      <TestFlowers position={[0, 0.5, 0]} />
+      {/* <TestFlowers position={[0, 0.5, 0]} /> */}
       <Gfsl position={[0, 0.5, 0]} />
 
       {/* <Bandstand position={[0, 0, 1]} /> */}
