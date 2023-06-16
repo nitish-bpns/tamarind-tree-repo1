@@ -20,7 +20,6 @@ export const LawnInterface = () => {
 
     // const { tableWidth, setTableWidth, legs, setLegs, legsColor, setLegsColor } =
 
-
     const {
         //Lawn
         lawnCeilingDrapeOne,

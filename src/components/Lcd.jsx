@@ -259,7 +259,7 @@ export function Lcd(props) {
     THREE.RepeatWrapping;
 
   return (
-    <group ref={group} {...props} dispose={null} scale={[0.3, 0.3, 0.3]} >
+    <group ref={group} {...props} dispose={null} >
 
       <group name="Scene">
 

@@ -262,7 +262,7 @@ export function Lpd(props) {
   console.log(lawnPillarDrapeOne, lpdOneTexture);
 
   return (
-    <group ref={group} {...props} dispose={null} scale={[0.3, 0.3, 0.3]} >
+    <group ref={group} {...props} dispose={null} >
       <group name="Scene">
 
         {lawnPillarDrapeOne === true && (
