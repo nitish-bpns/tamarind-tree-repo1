@@ -69,6 +69,27 @@
     margin: 10px;
 }
 
+.boxClose {
+    float: right;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* @media screen and (max-width: 464px) {
     .gazeboPanel {
         width: 100%;

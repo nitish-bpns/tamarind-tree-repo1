@@ -21,10 +21,10 @@ export function Lcdl1(props) {
     aoMap: './gcdTextures/texOne/grey.jpg',
   })
 
-  materialTextureProps.map.repeat.set(3, 3);
-  materialTextureProps.normalMap.repeat.set(3, 3);
-  materialTextureProps.roughnessMap.repeat.set(3, 3);
-  materialTextureProps.aoMap.repeat.set(3, 3);
+  materialTextureProps.map.repeat.set(0.1, 1);
+  materialTextureProps.normalMap.repeat.set(0.1, 1);
+  materialTextureProps.roughnessMap.repeat.set(0.1, 1);
+  materialTextureProps.aoMap.repeat.set(0.1, 1);
 
   materialTextureProps.map.wrapS =
     materialTextureProps.map.wrapT =
@@ -35,6 +35,9 @@ export function Lcdl1(props) {
     materialTextureProps.aoMap.wrapS =
     materialTextureProps.aoMap.wrapT =
     THREE.RepeatWrapping;
+
+  // materialTextureProps.wrapS = THREE.RepeatWrapping;
+  // materialTextureProps.wrapT = THREE.TextureLoader;
 
 
   const gcdRedTextureProps = useTexture({
@@ -271,7 +274,9 @@ export function Lcdl1(props) {
                             : lcdOneTexture === 6 ? sevenTextureProps
                               : lcdOneTexture === 7 ? eightTextureProps
                                 : lcdOneTexture === 8 ? nineTextureProps
-                                  : tenTextureProps} />
+                                  : tenTextureProps}
+                  side={THREE.DoubleSide}
+                />
 
               </mesh>
               <mesh name="curtain4005_1" geometry={nodes.curtain4005_1.geometry} material={materials.Color_000} >
@@ -284,7 +289,9 @@ export function Lcdl1(props) {
                             : lcdOneTexture === 6 ? sevenTextureProps
                               : lcdOneTexture === 7 ? eightTextureProps
                                 : lcdOneTexture === 8 ? nineTextureProps
-                                  : tenTextureProps} />
+                                  : tenTextureProps}
+                  side={THREE.DoubleSide}
+                />
 
               </mesh>
               <mesh name="curtain4005_2" geometry={nodes.curtain4005_2.geometry} material={materials['Color_000.002']} >
@@ -297,7 +304,9 @@ export function Lcdl1(props) {
                             : lcdOneTexture === 6 ? sevenTextureProps
                               : lcdOneTexture === 7 ? eightTextureProps
                                 : lcdOneTexture === 8 ? nineTextureProps
-                                  : tenTextureProps} />
+                                  : tenTextureProps}
+                  side={THREE.DoubleSide}
+                />
 
               </mesh>
               <mesh name="curtain4005_3" geometry={nodes.curtain4005_3.geometry} material={materials['Color_000.003']} >
@@ -310,7 +319,9 @@ export function Lcdl1(props) {
                             : lcdOneTexture === 6 ? sevenTextureProps
                               : lcdOneTexture === 7 ? eightTextureProps
                                 : lcdOneTexture === 8 ? nineTextureProps
-                                  : tenTextureProps} />
+                                  : tenTextureProps}
+                  side={THREE.DoubleSide}
+                />
 
               </mesh>
               <mesh name="curtain4005_4" geometry={nodes.curtain4005_4.geometry} material={materials['Color_000.004']} >
@@ -323,7 +334,9 @@ export function Lcdl1(props) {
                             : lcdOneTexture === 6 ? sevenTextureProps
                               : lcdOneTexture === 7 ? eightTextureProps
                                 : lcdOneTexture === 8 ? nineTextureProps
-                                  : tenTextureProps} />
+                                  : tenTextureProps}
+                  side={THREE.DoubleSide}
+                />
 
               </mesh>
             </group>

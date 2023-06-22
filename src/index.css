@@ -27,6 +27,12 @@ html {
   height: 100vh;
 }
 
+.bcMusic {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
 /* 
 #root {
   width: 100vw;

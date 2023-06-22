@@ -1,0 +1,233 @@
+.landing2 {
+    height: 100vh;
+    display: flex;
+}
+
+.sec1 {
+    width: 40%;
+}
+
+.sec2 {
+    width: 60%;
+}
+
+.secleft {
+    width: 100%;
+    height: 100vh;
+}
+
+.logo {
+    float: right;
+    width: 10rem;
+    height: auto;
+}
+
+.secanimate {
+    position: relative;
+    margin: 2rem 0 0 0rem;
+    padding: 0 0 0 10rem;
+}
+
+.sechead1 {
+    font-family: 'Montserrat';
+    font-size: 30px;
+    letter-spacing: 40px;
+    text-align: center;
+    /* margin: 2rem 0 0 0; */
+}
+
+.sechead2 {
+    font-family: 'Dancing Script';
+    font-size: 28px;
+    font-style: italic;
+    color: rgb(97, 97, 97);
+    text-align: center;
+    margin: 1.5rem 0 0 0;
+}
+
+.sec2Head {
+    font-family: 'Montserrat';
+    font-size: 22px;
+    position: absolute;
+    top: 10rem;
+    padding: 0 0 0rem 2.5rem;
+    letter-spacing: 5px;
+}
+
+.sec2con1 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 4rem 0 0rem 1rem;
+}
+
+.con11 {
+    width: 120px;
+    height: auto;
+}
+
+
+
+.inputhidden {
+    position: absolute;
+    left: -9999px;
+}
+
+input[type=radio]:checked+label>img {
+    border: 1px dashed #444;
+    /* box-shadow: 0 0 3px 3px #090; */
+}
+
+/* Stuff after this is only to make things more pretty */
+input[type=radio]+label>img {
+    /* border: 1px dashed #444; */
+    width: 150px;
+    height: 130px;
+    transition: 500ms all;
+    cursor: pointer;
+}
+
+input[type=radio]:checked+label>img {
+    transform:
+        rotateZ(-10deg) rotateX(10deg);
+}
+
+
+
+.sec2Head2 {
+    font-family: 'Montserrat';
+    font-size: 22px;
+    /* position: absolute; */
+    /* top: 13.5rem; */
+    padding: 1rem 0 0rem 2.5rem;
+    letter-spacing: 5px;
+}
+
+.sec2con2 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0 0rem 1rem;
+}
+
+
+
+.inputhidden2 {
+    position: absolute;
+    left: -9999px;
+}
+
+input[type=radio]:checked+label>.cpImg {
+    border: 1px dashed #444;
+
+    /* box-shadow: 0 0 3px 3px #090; */
+}
+
+/* Stuff after this is only to make things more pretty */
+input[type=radio]+label>.cpImg {
+    /* border: 1px dashed #444; */
+    width: 150px;
+    height: auto;
+    transition: 500ms all;
+    cursor: pointer;
+    margin: 0 1rem 0 1rem;
+}
+
+input[type=radio]:checked+label>.cpImg {
+    transform:
+        rotateZ(-10deg) rotateX(10deg);
+}
+
+.sec2Head3 {
+    font-family: 'Montserrat';
+    font-size: 22px;
+    /* position: absolute; */
+    /* top: 13.5rem; */
+    padding: 2.5rem 0 1.5rem 2.5rem;
+    letter-spacing: 5px;
+}
+
+.sec2Head4 {
+    font-family: 'Montserrat';
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    letter-spacing: 5px;
+    margin: 1.5rem 0 0 0;
+}
+
+.sec2Head5 {
+    font-family: 'Montserrat';
+    font-size: 18px;
+    text-align: center;
+    padding: 1rem 1rem 0.5rem 1rem;
+    letter-spacing: 3px;
+}
+
+.sec2Head6 {
+    font-family: 'Montserrat';
+    font-size: 22px;
+    /* position: absolute; */
+    /* top: 13.5rem; */
+    padding: 1rem 0 0rem 0rem;
+    letter-spacing: 5px;
+}
+
+.inputhidden4 {
+    position: absolute;
+    left: -9999px;
+}
+
+input[type=radio]:checked+label>.tpImg {
+    border: 1px dashed #444;
+    /* box-shadow: 0 0 3px 3px #090; */
+}
+
+/* Stuff after this is only to make things more pretty */
+input[type=radio]+label>.tpImg {
+    /* border: 1px dashed #444; */
+    width: 150px;
+    height: 100px;
+    transition: 500ms all;
+    cursor: pointer;
+    margin: 1rem 1.5rem 0 1.5rem;
+
+}
+
+input[type=radio]:checked+label>.tpImg {
+    transform:
+        rotateZ(-10deg) rotateX(10deg);
+}
+
+.sec2Head7 {
+    font-family: 'Montserrat';
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    padding: 0.rem 1rem 0.5rem 1rem;
+    letter-spacing: 5px;
+    margin: 1.5rem 0 0 0;
+}
+
+
+
+
+
+.cardHead {
+    text-align: center;
+    font-size: 24px;
+    padding: 0 0 10px 0;
+
+}
+
+.card1 {
+    padding: 2.5rem;
+    border-radius: 10px;
+}
+
+a:hover,
+a:visited,
+a:link,
+a:active {
+    text-decoration: none;
+    color: black;
+}

@@ -12,6 +12,8 @@ import { useConfigurator } from "../contexts/Configurator";
 import { Gfsl } from './Gfsl';
 // import { Abc } from './Abc';
 // import { BandModel } from './BandModel';
+
+
 import { Gcdl1 } from './Gcdl1';
 import { Gcdl2 } from './Gcdl2';
 import { Gcdl3 } from './Gcdl3';
@@ -24,12 +26,17 @@ import { Lcdl3 } from './Lcdl3';
 import { Lcdl4 } from './Lcdl4';
 import { Lpdl1 } from './Lpdl1';
 import { Lpdl2 } from './Lpdl2';
-// import { BandMain } from './BandMain';
-// import { BandLeft } from './BandLeft';
-// import { BandRight } from './BandRight';
-import { GazeboMain } from './GazeboMain';
-import { GazeboLeft } from './GazeboLeft';
-import { GazeboRight } from './GazeboRight';
+
+
+// import { GazeboRight } from './GazeboRight';
+// import { One } from './1';
+// import { Two } from './2';
+
+
+import { useLoader } from '@react-three/fiber';
+// import { Suspense } from 'react';
+import { GLTFLoader } from 'three/examples/jsm/loaders/gltfloader';
+import { Three } from './Three';
 
 
 export const Experience = ({ env = './scene/forest.hdr' }) => {
@@ -38,23 +45,26 @@ export const Experience = ({ env = './scene/forest.hdr' }) => {
 
   const { legs } = useConfigurator();
 
+  // const Band = useLoader(GLTFLoader, "./models/band.gltf");
+
   return (
     <>
 
-      <Environment files={env}
-        ground={{ height: 5, radius: 35, scale: 55 }}
+      <Environment files={env} ground={{ height: 5, radius: 35, scale: 55 }}
       />
+
+      {/* <Environment ground={{ height: 5, radius: 35, scale: 55 }}
+      /> */}
 
       {/* </Stage> */}
       {/* <TransformControls position={[3, 0, 0]} mode="translate"> */}
 
-      {/* <BandModel position={[0, 0.7, 0]} /> */}
-      {/* <BandMain position={[-10, 0.7, -18]} /> */}
-      {/* <BandLeft position={[0, 0.7, 0]} /> */}
-      {/* <BandRight position={[0, 0.7, 0]} /> */}
-      <GazeboMain position={[0, 2.3, 0]} />
-      <GazeboLeft position={[0, 2.3, 0]} />
-      <GazeboRight position={[0, 2.3, 0]} />
+
+      {/* <Three position={[0, 0, 0]} /> */}
+      {/* <Suspense fallback={null}> */}
+      {/* <primitive object={Ball.scene} position={[0, 0, 0]} /> */}
+      {/* <primitive object={Band.scene} position={[0, 0, 0]} /> */}
+      {/* </Suspense> */}
 
       {/* <GCD position={[0, 0.5, 0]} /> */}
       <Gcdl1 position={[0, 2.3, 0]} />
@@ -73,18 +83,20 @@ export const Experience = ({ env = './scene/forest.hdr' }) => {
       <Lpdl1 position={[0, 2.3, 0]} />
       <Lpdl2 position={[0, 2.3, 0]} />
 
+
+
       {/* <Lcd position={[0, 0.5, 0]} /> */}
       {/* <Gpd position={[0, 0.5, 0]} /> */}
       {/* <Lpd position={[0, 0.5, 0]} /> */}
-      <Gfsl position={[0, 2.3, 0]} />
+      {/* <Gfsl position={[0, 2.3, 0]} /> */}
       {/* <spotLight intensity={5.5} angle={90} penumbra={1} position={[10, 15, 10]} castShadow /> */}
 
       <OrbitControls
         makeDefault
         minPolarAngle={0}
-        minDistance={0.2}
+        minDistance={0.001}
         maxDistance={50}
-        maxPolarAngle={Math.PI / 2} />
+        maxPolarAngle={Math.PI / 1.5} />
       {/* </PresentationControls> */}
     </>
 

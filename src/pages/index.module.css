@@ -1,0 +1,234 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
+
+  /* font-family: "Sofia", sans-serif; */
+}
+
+* {
+  font-family: "parnas", Elegant serif;
+
+}
+
+.myapp {
+  width: 100vw !important;
+  height: 100vh !important;
+}
+
+.canvas1 {
+  width: 100vw;
+  height: 100vh;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.landing {
+  height: 100vh;
+  display: flex;
+}
+
+.main1 {
+  width: 40%;
+}
+
+.main2 {
+  width: 60%;
+}
+
+.bg1left {
+  width: 100%;
+  height: 100vh;
+}
+
+.logo {
+  float: right;
+  width: 10rem;
+  height: auto;
+}
+
+.bg1head1 {
+  font-family: 'Montserrat';
+  font-size: 50px;
+  letter-spacing: 40px;
+  text-align: center;
+  /* margin: 22rem 0 0 0; */
+  animation: mymove 2s normal forwards;
+  /* transition: all .2s ease-in-out; */
+}
+
+.bg1head2 {
+  font-family: 'Dancing Script';
+  font-size: 40px;
+  font-style: italic;
+  color: rgb(97, 97, 97);
+  /* letter-spacing: 40px; */
+  text-align: center;
+  margin: 1.5rem 0 0 0;
+  /* transition: all .2s ease-in-out; */
+  animation: mymove2 2s normal forwards;
+}
+
+.animate {
+  position: relative;
+  animation: myfirst 2s normal forwards;
+  margin: 22rem 0 0 0;
+  /* animation-direction: normal; */
+}
+
+@keyframes myfirst {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+
+  100% {
+    left: 0px;
+    top: -20rem;
+  }
+}
+
+@keyframes mymove {
+  0% {
+    font-size: 50px;
+  }
+
+  100% {
+    font-size: 30px;
+  }
+}
+
+@keyframes mymove2 {
+  0% {
+    font-size: 40px;
+  }
+
+  100% {
+    font-size: 28px;
+  }
+}
+
+.cardHead {
+  font-family: 'Montserrat';
+  font-size: 22px;
+  animation: visCard 4s normal forwards;
+  opacity: 0;
+  position: absolute;
+  top: 14rem;
+  padding: 0 0 0 2.5rem;
+}
+
+.main22 {
+  display: flex;
+  flex-wrap: wrap;
+  animation: visCard 4s normal forwards;
+  opacity: 0;
+  position: absolute;
+  top: 16rem;
+  padding: 0 0 0 2rem;
+  width: 55%;
+}
+
+.vCard {
+  width: 25%;
+  /* border-radius: 10px; */
+  /* height: 5rem; */
+}
+
+.gaz {
+  width: 90%;
+  padding: 5%;
+  border-radius: 20px;
+}
+
+@keyframes visCard {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .lndImg {
+  width: 100%;
+  position: relative;
+}
+
+.head1 {
+  width: 100%;
+  font-size: 6rem;
+  text-align: center;
+  padding: 3rem 0 4rem 0;
+}
+
+.head2 {
+  padding: 0 0 1.5rem 0;
+}
+
+.head3 {
+  padding: 2.5rem 0 1.5rem 0;
+}
+
+.generate {
+  padding: 3.5rem 0 2rem 0;
+}
+
+.create {
+  padding: 1rem 0 2rem 0;
+}
+
+.choose {
+  padding: 1rem 0 2rem 0;
+}
+ */
+
+
+
+
+
+
+@media screen and (max-width: 464px) {
+
+  /* .myapp {
+    width: 100vw;
+    height: 100vh;
+    top: 10rem;
+  } */
+}
