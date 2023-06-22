@@ -33,10 +33,10 @@ export const Interface = () => {
   //     play()
   // }, [value]);
 
-  function play() {
-    new Audio(sound).play()
+  // function play() {
+  //   new Audio(sound).play()
 
-  }
+  // }
 
   const { legs,
     setLegs,
@@ -210,19 +210,15 @@ export const Interface = () => {
 
   //close button
 
-  const [close, setClose] = useState(false);
+  const [close, setClose] = useState(true);
 
   const handleChange99 = (event, newClose) => {
-    setClose(false);
+    setClose(true);
   };
   const handleChange100 = event => {
     setClose(current => !current);
   };
 
-
-  console.log({
-    close
-  });
 
   return (
     <Box
@@ -278,8 +274,6 @@ export const Interface = () => {
               <ToggleButton className='toggleGazebo' value="gazebo">Gazebo</ToggleButton>
               <ToggleButton className='toggleGazebo' value="lawn">Lawn Area</ToggleButton>
             </ToggleButtonGroup>
-
-
 
 
             {close && (

@@ -8,19 +8,13 @@ import Landing from './pages/Landing';
 import Second from './pages/Second';
 import './index.css';
 
-import ReactAudioPlayer from 'react-audio-player';
+// import ReactAudioPlayer from 'react-audio-player';
 
 
 
 function App() {
   return (
     <>
-
-      {/* <ReactAudioPlayer
-        src="./assets/music.mp3"
-        autoPlay
-        controls
-      /> */}
 
       <Router>
         <Routes>
@@ -32,13 +26,13 @@ function App() {
         </Routes>
       </Router >
 
-      <ReactAudioPlayer
+      {/* <ReactAudioPlayer
         className='bcMusic'
         src="./music.mp3"
         autoPlay={true}
         controls={true}
         loop={true}
-      />
+      /> */}
 
     </>
   );
