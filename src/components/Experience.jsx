@@ -1,7 +1,7 @@
 import { Stage, OrbitControls, Environment, PresentationControls, TransformControls } from '@react-three/drei'
 // import { Table } from './Table';
 import { React, useRef, Suspense } from 'react'
-import { useConfigurator } from "../contexts/Configurator";
+// import { useConfigurator } from "../contexts/Configurator";
 // import { Grinder } from './Grinder';
 // import { Gazebo2 } from './Gazebo2';
 // import { GCD } from './Gcd';
@@ -33,17 +33,17 @@ import { Lpdl2 } from './Lpdl2';
 // import { Two } from './2';
 
 
-import { useLoader } from '@react-three/fiber';
+// import { useLoader } from '@react-three/fiber';
 // import { Suspense } from 'react';
-import { GLTFLoader } from 'three/examples/jsm/loaders/gltfloader';
-import { Three } from './Three';
+// import { GLTFLoader } from 'three/examples/jsm/loaders/gltfloader';
+// import { Three } from './Three';
 
 
 export const Experience = ({ env = './scene/forest.hdr' }) => {
 
   // export const Experience = () => {
 
-  const { legs } = useConfigurator();
+  // const { legs } = useConfigurator();
 
   // const Band = useLoader(GLTFLoader, "./models/band.gltf");
 
