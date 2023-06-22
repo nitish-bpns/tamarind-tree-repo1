@@ -7,7 +7,7 @@ import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import styles from './index.module.css';
 
-// import ReactAudioPlayer from 'react-audio-player';
+import ReactAudioPlayer from 'react-audio-player';
 
 
 function Landing() {
@@ -48,12 +48,12 @@ function Landing() {
                 </div>
 
 
-                {/* <ReactAudioPlayer
+                <ReactAudioPlayer
                     src="./music.mp3"
                     autoPlay={true}
                     controls
                     loop={true}
-                /> */}
+                />
 
 
 
