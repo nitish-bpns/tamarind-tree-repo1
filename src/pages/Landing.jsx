@@ -48,12 +48,17 @@ function Landing() {
                 </div>
 
 
-                <ReactAudioPlayer
+                {/* <ReactAudioPlayer
                     src="./music.mp3"
                     autoPlay={true}
                     controls
                     loop={true}
-                />
+                /> */}
+
+                <audio controls autoplay>
+                    <source src="./music.ogg" type="audio/ogg" />
+                    <source src="./music.mp3" type="audio/mpeg" />
+                </audio>
 
 
 
@@ -133,7 +138,7 @@ function Landing() {
 
 
 
-        </div>
+        </div >
     )
 }
 
